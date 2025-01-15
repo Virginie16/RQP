@@ -1,0 +1,28 @@
+<h2>Revue des matières premières et des articles de conditionnement</h2>
+
+<h3>Matieres premières</h3>
+<div *ngFor="let matierePremiere of matieresPremieres">
+  <h4>{{ matierePremiere.nom }}</h4>
+  <p>{{ matierePremiere.fournisseur }}</p>
+</div>
+
+<h3>Articles de conditionnement</h3>
+<div *ngFor="let articleConditionnement of articlesConditionnement">
+  <h4>{{ articleConditionnement.nom }}</h4>
+  <p>{{ articleConditionnement.fournisseur }}</p>
+</div>
+
+<div *ngIf="data">
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let key of displayedColumns">{{ key }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data">
+        <td *ngFor="let key of displayedColumns">{{ row[key] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

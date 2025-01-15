@@ -1,0 +1,21 @@
+Type;Nom;Fournisseur;Reference;N lot ;N lot fournisseur;Acceptation lot;C ou N/C;Commentaires
+Mat 1eres;Eau enrichie;A;EAUENR;S22-305;HR0074KT;21/07/2022;C;N/A
+Mat 1eres;Eau enrichie;A;EAUENR;S22-550;IR0064KT;12/01/2023;C;N/A
+Mat 1eres;Eau enrichie;A;EAUENR;S23-094;IR0069KT;20/03/2023;C;N/A
+Mat 1eres;Eau enrichie;B;EAUENR;S23-052;22-0793;23/02/2023;C;N/A
+Mat 1eres;Eau enrichie;B;EAUENR;S23-273;23-0078;27/07/2023;C;N/A
+Mat 1eres;Eau enrichie;C;EAUENRCYC;S22-255;N/A;04/08/2022;C;N/A
+Mat 1eres;Eau enrichie;C;EAUENRCYC;S23-049;N/A;11/04/2023;C;DEV 23 00346 : Lors de la premiere distillation, le rendement de la fraction D1 est de 74,3% pour une specification comprise entre 80,0 et 90,0 %.Action corrective : Cette specification est uniquement un controle in process de la production, cette donnee n'intervient pas dans la partie controle qualite finale, reprise du process de distillation
+Mat 1eres;Eau enrichie;C;EAUENRCYC;S23-072;N/A;15/05/2023;C;N/A
+Mat 1eres;Eau enrichie;C;EAUENRCYC;S23-105;N/A;05/06/2023;C;N/A
+Mat 1eres;Precurseur Mannose Triflate;D;TRIFLA025;S22-208;TATM-220114005-1;16/05/2022;C;N/A
+Mat 1eres;Precurseur Mannose Triflate;D;TRIFLA025;S22-342;TATM-210824013-1;08/08/2022;C;N/A
+Mat 1eres;Precurseur Mannose Triflate;D;TRIFLA025;S22-414;TATM-220114005-1;29/09/2022;C;N/A
+Mat 1eres;Precurseur Mannose Triflate;D;TRIFLA025;S22-525;TATM-220304013-1;12/12/2022;C;N/A
+Mat 1eres;Precurseur Mannose Triflate;E;KITCHIFDGD2/2;S22-256;IN10748/22-04-01;03/10/2022;C;DEV 22 01198 : Les tests substances apparentees et teneur en mannose ont ete sous traites au CQ Saclay >> CQ de Saclay accredite pour le controle des matieres premieres pour CPF >> Deviation pour tracabilite de la sous-traitance analytique
+Mat 1eres;Precurseur Mannose Triflate;E;KITCHIFDGD2/2;S22-373;22/06/2001;10/02/2023;C;OOS 22 00087 : Resultats hors specification pour le test de teneur du mannose fait sur le BULK Cause : Degradation du bulk >> OOS non avere sur le lot concerne
+Mat 1eres;Precurseur Mannose Triflate;E;KITCHIFDGD2/2;S22-537;IN11501/22-07-01;13/06/2023;C;N/A
+Mat 1eres;Precurseur Mannose Triflate;E;KITCHIFDGD2/2;S23-238;OF20422;04/09/2023;C;N/A
+Excipients;Poche solution NaCl … 0,9%;F;DILPOC100;S22-091;22010003;16/03/2022;C;N/A
+Excipients;Poche solution NaCl … 0,9%;F;DILPOC100;S22-439;22082406;06/10/2022;C;N/A
+Excipients;Poche solution NaCl … 0,9%;F;DILPOC100;S23-150;23031506;22/05/2023;C;DEV 23 01039 : la commande ete passee … Carelide, mais elle a ete livree par Aguettant qui a emis la facture. La facturation CPF ne peut pas relier une commande Carelide … une facture Aguettant. Cause: Rachat de CARELIDE par AGUETTANT. Le changement de fournisseur est trace dans le CC 23 00069. 

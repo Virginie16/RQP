@@ -1,0 +1,29 @@
+div {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  background-image: radial-gradient(
+      49% 81% at 45% 47%,
+      #03ff6d45 0%,
+      #073aff00 100%
+    ),
+    radial-gradient(113% 91% at 17% -2%, #f8ddd4 1%, #ff000000 99%),
+    radial-gradient(142% 91% at 83% 7%, #fae5f4 1%, #ff000000 99%),
+    radial-gradient(142% 91% at -6% 74%, #71ceebff 0%, #ff000000 99%),
+    radial-gradient(142% 91% at 111% 84%, #e583b9 0%, #ac23d7ff 100%);
+}
+h1 {
+  font-family: system-ui;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+  font-size: 5vw;
+}
