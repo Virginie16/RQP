@@ -1,0 +1,26 @@
+/* filepath: /c:/Users/Virginie/IdeaProjects/RQP-excel/RQP/src/app/matiere-premieres/matiere-premieres.component.scss */
+.matieres-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.matieres-table th,
+.matieres-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.matieres-table th {
+  background-color: #f0cbfa;
+}
+
+.matieres-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.matieres-table tr:hover {
+  background-color: #f1f1f1;
+}
