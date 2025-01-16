@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, DatePipe } from '@angular/common';
 import { ApiHttpService } from '../core/services/api-http.service';
 import { ApiEndpointsService } from '../core/services/api-endpoints.service';
 import { Matiere } from '../matieres';
 
 @Component({
   selector: 'app-matiere-premieres',
-  imports: [NgFor],
+  imports: [NgFor, DatePipe],
   templateUrl: './matiere-premieres.component.html',
   styleUrl: './matiere-premieres.component.scss',
 })
