@@ -1,30 +1,77 @@
-<h2>Revue des matières premières et des articles de conditionnement</h2>
+<button (click)="navigateToAbout()">Filtrer les données</button>
 
-<table class="matieres-table">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Nom</th>
-      <th>Fournisseur</th>
-      <th>Référence</th>
-      <th>N° lot</th>
-      <th>N° lot fournisseur</th>
-      <th>Acceptation du lot</th>
-      <th>C/NC</th>
-      <th>Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let matiere of matieres">
-      <td>{{ matiere.Type }}</td>
-      <td>{{ matiere.Nom }}</td>
-      <td>{{ matiere.Fournisseur }}</td>
-      <td>{{ matiere.Reference }}</td>
-      <td>{{ matiere.No_lot }}</td>
-      <td>{{ matiere.No_lot_fournisseur }}</td>
-      <td>{{ matiere.Acceptation_lot | date: "yyyy-MM-dd" }}</td>
-      <td>{{ matiere.C_NC }}</td>
-      <td>{{ matiere.Commentaires }}</td>
-    </tr>
-  </tbody>
+<hr />
+
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="" #input />
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Colonne Type -->
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef>Type</th>
+    <td mat-cell *matCellDef="let matiere">{{ matiere.Type }}</td>
+  </ng-container>
+
+  <!-- Colonne Nom -->
+  <ng-container matColumnDef="nom">
+    <th mat-header-cell *matHeaderCellDef>Nom</th>
+    <td mat-cell *matCellDef="let matiere">{{ matiere.Nom }}</td>
+  </ng-container>
+
+  <!-- Colonne Fournisseur -->
+  <ng-container matColumnDef="fournisseur">
+    <th mat-header-cell *matHeaderCellDef>Fournisseur</th>
+    <td mat-cell *matCellDef="let matiere">{{ matiere.Fournisseur }}</td>
+  </ng-container>
+
+  <!-- Colonne Référence -->
+  <ng-container matColumnDef="reference">
+    <th mat-header-cell *matHeaderCellDef>Référence</th>
+    <td mat-cell *matCellDef="let matiere">{{ matiere.Reference }}</td>
+  </ng-container>
+
+  <!-- Colonne N° lot -->
+  <ng-container matColumnDef="noLot">
+    <th mat-header-cell *matHeaderCellDef>N° lot</th>
+    <td mat-cell *matCellDef="let matiere">{{ matiere.No_lot }}</td>
+  </ng-container>
+
+  <!-- Colonne N° lot fournisseur -->
+  <ng-container matColumnDef="noLotFournisseur">
+    <th mat-header-cell *matHeaderCellDef>N° lot fournisseur</th>
+    <td mat-cell *matCellDef="let matiere">{{ matiere.No_lot_fournisseur }}</td>
+  </ng-container>
+
+  <!-- Colonne Acceptation du lot -->
+  <ng-container matColumnDef="acceptationLot">
+    <th mat-header-cell *matHeaderCellDef>Acceptation du lot</th>
+    <td mat-cell *matCellDef="let matiere">
+      {{ matiere.Acceptation_lot | date: "yyyy-MM-dd" }}
+    </td>
+  </ng-container>
+
+  <!-- Colonne C/NC -->
+  <ng-container matColumnDef="cNC">
+    <th mat-header-cell *matHeaderCellDef>C/NC</th>
+    <td mat-cell *matCellDef="let matiere">{{ matiere.C_NC }}</td>
+  </ng-container>
+
+  <!-- Colonne Commentaires -->
+  <ng-container matColumnDef="commentaires">
+    <th mat-header-cell *matHeaderCellDef>Commentaires</th>
+    <td mat-cell *matCellDef="let matiere">{{ matiere.Commentaires }}</td>
+  </ng-container>
+
+  <!-- Lignes de l'entête et du tableau -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+  <!-- Ligne affichée lorsqu'il n'y a pas de données -->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="9">
+      Aucune donnée correspondant au filtre "{{ input.value }}"
+    </td>
+  </tr>
 </table>

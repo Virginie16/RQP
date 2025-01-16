@@ -1,26 +1,56 @@
-/* filepath: /c:/Users/Virginie/IdeaProjects/RQP-excel/RQP/src/app/matiere-premieres/matiere-premieres.component.scss */
-.matieres-table {
+button {
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #82388b;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+/* Structure */
+table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 18px;
   text-align: left;
+  background-color: white;
 }
-
-.matieres-table th,
-.matieres-table td {
+table th,
+table td {
   padding: 12px 15px;
   border: 1px solid #ddd;
+  color: black;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
 }
-
-.matieres-table th {
+table th {
   background-color: #f0cbfa;
 }
 
-.matieres-table tr:nth-child(even) {
+table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-.matieres-table tr:hover {
+table tr:hover {
   background-color: #f1f1f1;
+}
+
+.mat-mdc-form-field {
+  font-size: 18px;
+  width: 20%;
+  margin: 10px;
+}
+.mat-mdc-form-field mat-label {
+  color: black;
+  font-size: 20px;
+}
+.mat-mdc-form-field input {
+  color: black;
 }

@@ -1,0 +1,34 @@
+<h2>Selection des matières premières</h2>
+<button (click)="navigateToAccueil()">Retour</button>
+<button (click)="exportPDF()">Exporter en PDF</button>
+
+<div id="filtered-content">
+  <table class="matieres-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Nom</th>
+        <th>Fournisseur</th>
+        <th>Référence</th>
+        <th>N° lot</th>
+        <th>N° lot fournisseur</th>
+        <th>Acceptation du lot</th>
+        <th>C/NC</th>
+        <th>Commentaires</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let matiere of filteredMatieres">
+        <td>{{ matiere.Type }}</td>
+        <td>{{ matiere.Nom }}</td>
+        <td>{{ matiere.Fournisseur }}</td>
+        <td>{{ matiere.Reference }}</td>
+        <td>{{ matiere.No_lot }}</td>
+        <td>{{ matiere.No_lot_fournisseur }}</td>
+        <td>{{ matiere.Acceptation_lot | date: "yyyy-MM-dd" }}</td>
+        <td>{{ matiere.C_NC }}</td>
+        <td>{{ matiere.Commentaires }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

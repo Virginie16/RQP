@@ -12,6 +12,10 @@ import {
 import { provideRouter } from '@angular/router';
 import { importProvidersFrom } from '@angular/core';
 import { MatierePremieresComponent } from './app/matiere-premieres/matiere-premieres.component';
+import { SelectionComponent } from './app/selection/selection.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -20,6 +24,12 @@ bootstrapApplication(AppComponent, {
     ApiEndpointsService,
     Constants,
     provideHttpClient(withInterceptorsFromDi()),
-    provideRouter([{ path: '', component: MatierePremieresComponent }]),
+    provideRouter([
+      { path: 'allMatiere', component: MatierePremieresComponent },
+      { path: 'selection', component: SelectionComponent },
+    ]),
+    MatTableModule,
+    MatInputModule,
+    provideAnimationsAsync(),
   ],
 }).catch((err) => console.error(err));
