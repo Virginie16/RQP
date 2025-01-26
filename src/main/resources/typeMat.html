@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charger un Document Word</title>
+</head>
+<body>
+<h1>Charger un Document Word</h1>
+
+<!-- Afficher les messages -->
+<p th:if="${message}" th:text="${message}"></p>
+
+<form method="post" action="/word/process" enctype="multipart/form-data">
+    <label for="file">Télécharger le fichier Word (.docx) :</label>
+    <input type="file" name="file" id="file" required />
+    <br/><br/>
+
+    <label for="typeMat">Critère (typeMat) :</label>
+    <input type="text" name="typeMat" id="typeMat" required />
+    <br/><br/>
+
+    <button type="submit">Envoyer</button>
+</form>
+</body>
+</html>
